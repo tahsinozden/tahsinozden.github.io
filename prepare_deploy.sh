@@ -7,5 +7,5 @@ if [[ $projectFolder == "" ]]; then
     exit 1
 fi
 
-find . -maxdepth 1 ! \( -name "*.sh" -o -name ".*" \) -type f -exec rm -f {} +
+find . -maxdepth 1 ! \( -name "*.sh" -o -name ".*" -o -name "*.md" \) -type f -exec rm -f {} +
 cp $projectFolder/* . && cp index.html 404.html
